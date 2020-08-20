@@ -1,0 +1,17 @@
+.pepe-parent {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pepe-child {
+	flex: 25%;
+	margin: 10px;
+	border: 1px;
+	border-color: black;
+}
+
+img {
+	width: 420px;
+	height: 420px;
+	object-fit: scale-down;
+}
