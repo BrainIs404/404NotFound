@@ -1,0 +1,26 @@
+{
+  "name": "404notfound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrainIs404/404NotFound.git"
+  },
+  "author": "Victor Ngo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrainIs404/404NotFound/issues"
+  },
+  "homepage": "https://github.com/BrainIs404/404NotFound#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "^5.10.3",
+    "socket.io": "^2.3.0"
+  }
+}
