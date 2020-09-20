@@ -4,22 +4,44 @@ socket.on("message", addMessages)
 $(() => {
 	$("#send").click(()=>{
 		sendMessage({
-			//name: $("#name").val(),
-			name: "TestUser",
-			message:$("#message").val()});
+			name: $("#username").text(),
+			message:$("#message").val()}
+		);
+
+		console.log(`username is: ${name}`);
 	})
 	getMessages()
+
+	$("#login").click(function() {
+		var username = $('#usernameInput').val();
+		var password = $('#passwordInput').val();
+		if (username && password) {
+			$('#loginModal').modal('hide');
+			$('#modalParent').hide();
+			$("#loginUsername").append(
+				`<p class="text-primary" id="username">${$('#usernameInput').val()}</p>`
+			);
+		}
+
+		sendUserCreds(username, password);
+	});
 })
+
+function sendUserCreds(creds) {
+	$.post('https://deco3801-404notfound.uqcloud.net/users', creds);
+}
+
 function addMessages(message){
 	$("#messages").append(`
-		<h4> ${message.name} </h4>
-		<p>  ${message.message} </p>`)
+		<h4>${message.name}</h4>
+		<p>${message.message}</p>`)
 }
 function getMessages(){
-	$.get('http://localhost:3000/messages', (data) => {
+	$.get('https://deco3801-404notfound.uqcloud.net/messages', (data) => {
 		data.forEach(addMessages);
 	})
 }
+
 function sendMessage(message){
-	$.post('http://localhost:3000/messages', message)
+	$.post('https://deco3801-404notfound.uqcloud.net/messages', message);
 }
