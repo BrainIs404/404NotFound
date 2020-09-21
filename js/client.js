@@ -19,12 +19,13 @@ $(() => {
 			$('#loginModal').modal('hide');
 			$('#modalParent').hide();
 			$("#loginUsername").append(
-				`<p class="text-primary" id="username">${$('#usernameInput').val()}</p>`
+				`<p class="text-primary" id="username">${username}</p>`
 			);
 		}
 
-		sendUserCreds(username, password);
+		sendUserCreds({username, password});
 	});
+	
 })
 
 function sendUserCreds(creds) {

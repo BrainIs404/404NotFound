@@ -14,7 +14,7 @@ app.set('trust proxy', 'loopback');
 app.get('/messages/user', (req, res) => {
   Message.find({},(err, messages)=> {
     res.send(messages);
-  })
+  });
 })
 
 app.post('/messages', (req, res) => {
@@ -27,6 +27,15 @@ app.post('/messages', (req, res) => {
   })
 })
 
+app.post('/user', (req, res) => {
+  var user = new User(req.body);
+  message.save((err) =>{
+    if(err)
+      sendStatus(500);
+    res.sendStatus(200);
+  })
+})
+
 io.on("connection", () =>{
   console.log("a user is connected")
 })
@@ -34,6 +43,11 @@ io.on("connection", () =>{
 var Message = mongoose.model('Message', {
 	name: String,
 	message: String,
+})
+
+var User = mongoose.model('User', {
+  name: String,
+  password: String,
 })
 
 var dURL = 'mongodb://localhost:27017/chat'

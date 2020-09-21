@@ -104,25 +104,39 @@
 				<div class="title">
 					<h5>Vote</h5>
 				</div>
+
+				<form>
 					<div>
-						<div><button type="button" class="but">Bass 50%</button></div>
-						<div><button type="button" class="but">Bass -10%</button></div>
-						<div><button type="button" class="but">Mid -10%</button></div>
-						<div><button type="button" class="but">Treble 10%</button></div>
-						<div><button type="button" class="but">Treble 30%</button></div>
+						<label><input type="range" name="range" min="0" max="25">Bass</label>
+						<label><input type="range" name="range" min="0" max="25">Treble</label>
+						<label><input type="range" name="range" min="0" max="25">Pitch</label>
+						<label><input type="range" name="range" min="0" max="25">Tempo</label>
 					</div>
 
-					<div class="button2">
-						<div><button type="button" class="but1">Bass 50%</button></div>
-						<div><button type="button" class="but1">Bass -10%</button></div>
-						<div><button type="button" class="but1">Treble 30%</button></div>
-						<div><button type="button" class="but1">Treble 30%</button></div>
-					</div>
-
-					<div class="button3">
+					<div>
 						<input type="reset" value="Reset" class="but2">
-						<input type="submit" value="Vote" class="but2">
+						<input type="submit" value="Vote" class="but2" id="sumitVote">
 					</div>
+
+				</form>
+<!--
+				<div>
+					<div><button type="button" class="but" id="option0">Bass 50%</button></div>
+					<div><button type="button" class="but" id="option1">Bass 50%</button></div>
+					<div><button type="button" class="but" id="option2">Bass +10%</button></div>
+					<div><button type="button" class="but" id="option3">Mid -10%</button></div>
+					<div><button type="button" class="but" id="option4">Treble 10%</button></div>
+				</div>
+
+				<div class="button2">
+					<div><button type="button" class="but" id="option5">Treble 30%</button></div>
+					<div><button type="button" class="but1" id="option6">Bass -50%</button></div>
+					<div><button type="button" class="but1" id="option7">Bass -10%</button></div>
+					<div><button type="button" class="but1" id="option8">Treble 30%</button></div>
+					<div><button type="button" class="but1" id="option9">Treble 30%</button></div>
+				</div>
+
+-->	
 			</div>
 		</div>
 
