@@ -51,7 +51,6 @@ nav {
 
 .info{
     display: inline-block;
-    margin-top: 300px;
     margin-left: 160px;
 }
 
@@ -196,4 +195,41 @@ nav {
 
 #message {
     width: 320px;
+}
+
+.rowSlider {
+    display: flex;
+    justify-content: space-around;
+    max-width: 550px;
+    text-align: center;
+}
+
+.rs-handle {
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 4px 0px #000;
+}
+
+.rs-tooltip-text {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.rs-handle:hover {
+    cursor: pointer;
+}
+
+.sliderSubmit {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+
+.progress-bar.border {
+    border-width: 2px !important;
+    background: #5b7dc6;
+    border-color: #1f46ae !important;
+}
+
+.progress-bar.rounded, .progress.rounded {
+    border-radius: 20px !important;
 }

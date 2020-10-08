@@ -25,7 +25,7 @@ $(() => {
 
 		sendUserCreds({username, password});
 	});
-	
+
 })
 
 function sendUserCreds(creds) {
