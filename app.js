@@ -50,7 +50,7 @@ var User = mongoose.model('User', {
   password: String,
 })
 
-var dURL = 'mongodb://localhost:27017/chat'
+var dURL = 'mongodb://deco3801-404notfound.uqcloud.net:27017'
 
 mongoose.connect(dURL, (err) => {
 	console.log('mongodb connected', err)
@@ -58,4 +58,4 @@ mongoose.connect(dURL, (err) => {
 
 var server = http.listen(8081, () => {
 	console.log('server is running on port', server.address().port);
-});
+});6

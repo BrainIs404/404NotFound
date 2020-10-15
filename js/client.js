@@ -5,27 +5,28 @@ $(() => {
 	$("#send").click(()=>{
 		sendMessage({
 			name: $("#username").text(),
-			message:$("#message").val()}
-		);
+			message: $("#message").val()
+		});
 
 		console.log(`username is: ${name}`);
 	})
 	getMessages()
 
 	$("#login").click(function() {
-		var username = $('#usernameInput').val();
-		var password = $('#passwordInput').val();
-		if (username && password) {
+		if ($('#usernameInput').val() && $('#passwordInput').val()) {
 			$('#loginModal').modal('hide');
 			$('#modalParent').hide();
+
 			$("#loginUsername").append(
-				`<p class="text-primary" id="username">${username}</p>`
+			`<p class="text-primary" id="username">${$('#passwordInput').val()}</p>`
 			);
 		}
 
-		sendUserCreds({username, password});
+		sendUserCreds({
+			username: $('#usernameInput').val(),
+			password: $('#passwordInput').val()
+		});
 	});
-
 })
 
 function sendUserCreds(creds) {
