@@ -7,8 +7,6 @@ $(() => {
 			name: $("#username").text(),
 			message: $("#message").val()
 		});
-
-		console.log(`username is: ${name}`);
 	})
 	getMessages()
 
@@ -18,7 +16,7 @@ $(() => {
 			$('#modalParent').hide();
 
 			$("#loginUsername").append(
-			`<p class="text-primary" id="username">${$('#passwordInput').val()}</p>`
+			`<p class="text-primary" id="username">${$('#usernameInput').val()}</p>`
 			);
 		}
 
@@ -27,23 +25,29 @@ $(() => {
 			password: $('#passwordInput').val()
 		});
 	});
+
+	$("#effect-vote").submit(function (event) {
+		event.preventDefault();
+		response = $("#effect-vote").serializeArray();
+		console.log(response);
+	})
 })
 
 function sendUserCreds(creds) {
-	$.post('https://deco3801-404notfound.uqcloud.net/users', creds);
+	$.post('http://localhost:3000/user', creds);
 }
 
 function addMessages(message){
 	$("#messages").append(`
-		<h4>${message.name}</h4>
+		<p>${message.name}</p>
 		<p>${message.message}</p>`)
 }
 function getMessages(){
-	$.get('https://deco3801-404notfound.uqcloud.net/messages', (data) => {
+	$.get('/messages', (data) => {
 		data.forEach(addMessages);
 	})
 }
 
 function sendMessage(message){
-	$.post('https://deco3801-404notfound.uqcloud.net/messages', message);
+	$.post('http://localhost:3000/messages', message);
 }
