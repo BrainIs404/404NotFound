@@ -83,61 +83,82 @@
 				</div>
 
 				<div class="col h-50">
-					<div class="progress rounded mt-4" style="height: 20%;">
-						<div class="progress-bar border rounded" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Option 1st 100%</div>
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="bass-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
 						</div>
-					<div class="progress rounded mt-4" style="height: 20%;">
-						<div class="progress-bar border rounded" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Option 2nd 90%</div>
 					</div>
-					<div class="progress rounded mt-4" style="height: 20%;">
-						<div class="progress-bar border rounded" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Option 3rd 80%</div>
+
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="tremolo-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
+						</div>
 					</div>
-					<div class="progress rounded mt-4" style="height: 20%;">
-						<div class="progress-bar border rounded" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Option 4th 70%</div>
+
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="pitch-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
+						</div>
 					</div>
-					<div class="progress rounded mt-4" style="height: 20%;">
-						<div class="progress-bar border rounded" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Option 5th 60%</div>
+
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="distortion-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
+						</div>
 					</div>
+
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="echo-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
+						</div>
+					</div>
+
+					<div class="progress rounded mt-4" style="height: 15%;">
+						<div class="progress-bar border rounded" id="delay-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							0
+						</div>
+					</div>
+
 				</div>
 
 			</div>
 
 			<div class="vote">
 				<div class="title">
-					<h5>Vote</h5>
+					<h5>Timer</h5>
 				</div>
 
 				<form id="effect-vote">
 					<div class="rowSlider">
 						<div class="colSlider">
-							<div id="slider1"></div>
+							<div id="bass"></div>
 							<p>Bass</p>
 						</div>
 
 						<div class="colSlider">
-							<div id="slider2"></div>
+							<div id="tremolo"></div>
 							<p>Tremolo</p>
 						</div>
 
 						<div class="colSlider">
-							<div id="slider3"></div>
+							<div id="pitch"></div>
 							<p>Pitch</p>
 						</div>
 					</div>
 
 					<div class="rowSlider">
 						<div class="colSlider">
-							<div id="slider4"></div>
+							<div id="distortion"></div>
 							<p>Distortion</p>
 						</div>
 
 						<div class="colSlider">
-							<div id="slider5"></div>
+							<div id="echo"></div>
 							<p>Echo</p>
 						</div>
 
 						<div class="colSlider">
-							<div id="slider6"></div>
+							<div id="delay"></div>
 							<p>Delay</p>
 						</div>
 					</div>

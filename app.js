@@ -31,18 +31,7 @@ app.post('/messages', (req, res) => {
 
 app.post('/user', (req, res) => {
   var user = new User(req.body);
-  message.save((err) =>{
-    if(err) {
-      console.log(err);
-      sendStatus(500);
-    }
-    res.sendStatus(200);
-  })
-})
-
-app.post('/vote', (req, res) => {
-  var user = new User(req.body);
-  message.save((err) =>{
+  user.save((err) =>{
     if(err) {
       console.log(err);
       sendStatus(500);
@@ -52,12 +41,19 @@ app.post('/vote', (req, res) => {
 })
 
 app.get('/vote', (req, res) => {
-  var user = new User(req.body);
-  message.save((err) =>{
+  Vote.find({},(err, vote)=> {
+    res.send(vote);
+  });
+})
+
+app.post('/vote', (req, res) => {
+  var vote = new Vote(req.body);
+  vote.save((err) =>{
     if(err) {
       console.log(err);
       sendStatus(500);
     }
+    io.emit('vote', req.body);
     res.sendStatus(200);
   })
 })
@@ -77,7 +73,7 @@ var User = mongoose.model('User', {
 })
 
 var Vote = mongoose.model('Vote', {
-  name: String,
+  username: String,
   bass: Number,
   tremolo: Number,
   pitch: Number,
@@ -94,4 +90,4 @@ mongoose.connect(dURL, (err) => {
 
 var server = http.listen(3000, () => {
 	console.log('server is running on port', server.address().port);
-});6
+});

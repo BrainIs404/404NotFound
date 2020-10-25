@@ -1,5 +1,5 @@
 $(function() {
-	$(`#slider1`).roundSlider({
+	$(`#bass`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -18,11 +18,11 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider1`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#bass`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 
-	$(`#slider2`).roundSlider({
+	$(`#tremolo`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -41,11 +41,11 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider2`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#tremolo`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 
-	$(`#slider3`).roundSlider({
+	$(`#pitch`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -64,11 +64,11 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider3`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#pitch`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 
-	$(`#slider4`).roundSlider({
+	$(`#distortion`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -87,11 +87,11 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider4`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#distortion`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 
-	$(`#slider5`).roundSlider({
+	$(`#echo`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -110,11 +110,11 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider5`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#echo`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 
-	$(`#slider6`).roundSlider({
+	$(`#delay`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
 		startAngle: "315",
@@ -133,7 +133,7 @@ $(function() {
 			startValue: 0,
 		valueChange: function (e) {
 			var color = e.isInvertedRange ? "#709efa" : "#1f31f0";
-			$(`#slider6`).roundSlider({ "rangeColor": color, "tooltipColor": color });
+			$(`#delay`).roundSlider({ "rangeColor": color, "tooltipColor": color });
 		}
 	});
 });
