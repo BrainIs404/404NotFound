@@ -2,15 +2,13 @@ var socket = io();
 socket.on("message", addMessages)
 socket.on("vote", addVote)
 
-var options = ["bass-bar", "tremolo-bar", "pitch-bar", "distortion-bar", "echo-bar", "delay-bar"];
-
 function sendUserCreds(creds) {
 	$.post('http://localhost:3000/user', creds);
 }
 
 function addMessages(message){
 	$("#messages").append(`
-		<p>${message.name}</p>
+		<h3>${message.name}</h3>
 		<p>${message.message}</p>`)
 }
 
@@ -24,18 +22,25 @@ function sendMessage(message){
 	$.post('http://localhost:3000/messages', message);
 }
 
-function getBarValue(id, vote) {
+function changeBarValue(id, vote) {
 	var voteValue = $(`#${id}`).attr("aria-valuenow");
 	$(`#${id}`).attr("aria-valuenow", voteValue + 1);
 	$(`#${id}`).css("width", `${voteValue + 1}%`);
+	$(`#${id}`).text(`${vote}`);
 }
 
-function sendVote(vote){
+function sendVote(vote) {
 	$.post('http://localhost:3000/vote', vote);
 }
 
 function addVote(vote) {
 	$("#messages").append(`<p>${vote.username} Voted</p>`)
+	changeBarValue("bass-bar", "bass");
+	changeBarValue("tremolo-bar", "tremolo");
+	changeBarValue("pitch-bar", "pitch");
+	changeBarValue("distortion-bar", "distortion");
+	changeBarValue("echo-bar", "echo");
+	changeBarValue("delay-bar", "delay");
 }
 
 function getVote() {
@@ -74,14 +79,24 @@ $(() => {
 		response = $("#effect-vote").serializeArray();
 		console.log(response)
 		sendVote({
-			name: $("#username").text(),
+			username: $("#username").text(),
 			bass: response[0],
 			tremolo: response[1],
 			pitch: response[2],
 			distortion: response[3],
 			echo: response[4],
 			delay: response[5]
-		})
+		});
 	})
 	getVote();
+
+	$("#sliderControl").on('click', '#reset', function () {
+		console.log("run");
+		$("#bass").roundSlider("setValue", 0);
+		$("#tremolo").roundSlider("setValue", 0);
+		$("#pitch").roundSlider("setValue", 0);
+		$("#distortion").roundSlider("setValue", 0);
+		$("#echo").roundSlider("setValue", 0);
+		$("#delay").roundSlider("setValue", 0);
+	})
 })
