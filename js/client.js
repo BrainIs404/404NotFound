@@ -75,6 +75,8 @@ function getVote() {
 }
 
 $(() => {
+	$(".end-vote").hide();
+
 	$("#send").click(()=>{
 		sendMessage({
 			name: $("#username").text(),
@@ -87,7 +89,11 @@ $(() => {
 		if ($('#usernameInput').val() && $('#passwordInput').val()) {
 			$('#loginModal').modal('hide');
 			$('#modalParent').hide();
-
+			
+			if ($('#usernameInput').val() == "streamer") {
+				$('.vote').hide();
+				$('.end-vote').show();
+			}
 			$("#loginUsername").append(
 			`<h3 id="username">${$('#usernameInput').val()}</h3>`
 			);
