@@ -233,3 +233,23 @@ nav {
 .progress-bar.rounded, .progress.rounded {
     border-radius: 20px !important;
 }
+
+.vote-progress {
+    height: 15%;
+    width: 80%;
+}
+
+.vote-progress span {
+    position: absolute;
+    right: 3%;
+    color: black;
+}
+
+.vote-progress p {
+    margin: auto;
+}
+
+#username {
+    color: white;
+    font-style: bold;
+}

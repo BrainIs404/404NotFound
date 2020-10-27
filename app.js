@@ -58,10 +58,6 @@ app.post('/vote', (req, res) => {
   })
 })
 
-io.on("connection", () =>{
-  console.log("a user is connected")
-})
-
 var Message = mongoose.model('Message', {
 	name: String,
 	message: String,
@@ -75,19 +71,20 @@ var User = mongoose.model('User', {
 var Vote = mongoose.model('Vote', {
   username: String,
   bass: Number,
-  tremolo: Number,
-  pitch: Number,
-  distortion: Number,
-  echo: Number,
-  delay: Number,
+  treble: Number,
+  middle: Number,
 })
 
 var dURL = 'mongodb://localhost:27017/chat'
 
-mongoose.connect(dURL, (err) => {
+chatDb = mongoose.connect(dURL, (err) => {
 	console.log('mongodb connected', err)
 })
 
 var server = http.listen(3000, () => {
 	console.log('server is running on port', server.address().port);
 });
+
+io.on("connection", () =>{
+  console.log("a user is connected")
+})

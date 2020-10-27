@@ -12,7 +12,6 @@
 	<link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
 	<script type="text/javascript" src="js/client.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
-	
 </head>
 
 <body>
@@ -47,7 +46,7 @@
 												</div>
 												<div class="form-group mx-sm-3 mb-2">
 													<label for="passwordInput" class="sr-only">Password</label>
-													<input type="password" class="form-control" id="passwordInput" test="12234" placeholder="Password">
+													<input type="password" class="form-control" id="passwordInput" placeholder="Password">
 												</div>
 											</form>
 										</div>
@@ -83,39 +82,45 @@
 				</div>
 
 				<div class="col h-50">
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="bass-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="bass-up-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>bass +</span>
+							<p id="bass-up-vote">0</p>
 						</div>
 					</div>
 
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="tremolo-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="bass-down-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>bass -</span>
+							<p id="bass-down-vote">0</p>
 						</div>
 					</div>
 
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="pitch-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="treble-up-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>treble +</span>
+							<p id="treble-up-vote">0</p>
 						</div>
 					</div>
 
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="distortion-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="treble-down-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>treble -</span>
+							<p id="treble-down-vote">0</p>
 						</div>
 					</div>
 
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="echo-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="middle-up-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>middle +</span>
+							<p id="middle-up-vote">0</p>
 						</div>
 					</div>
 
-					<div class="progress rounded mt-4" style="height: 15%;">
-						<div class="progress-bar border rounded" id="delay-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-							0
+					<div class="progress rounded mt-4 vote-progress">
+						<div class="progress-bar border rounded" id="middle-down-bar" style="width: 15%;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+							<span>middle -</span>
+							<p id="middle-down-vote">0</p>
 						</div>
 					</div>
 
@@ -136,30 +141,13 @@
 						</div>
 
 						<div class="colSlider">
-							<div id="tremolo"></div>
-							<p>Tremolo</p>
+							<div id="treble"></div>
+							<p>Treble</p>
 						</div>
 
 						<div class="colSlider">
-							<div id="pitch"></div>
-							<p>Pitch</p>
-						</div>
-					</div>
-
-					<div class="rowSlider">
-						<div class="colSlider">
-							<div id="distortion"></div>
-							<p>Distortion</p>
-						</div>
-
-						<div class="colSlider">
-							<div id="echo"></div>
-							<p>Echo</p>
-						</div>
-
-						<div class="colSlider">
-							<div id="delay"></div>
-							<p>Delay</p>
+							<div id="middle"></div>
+							<p>Middle</p>
 						</div>
 					</div>
 
