@@ -7,9 +7,15 @@ function sendUserCreds(creds) {
 }
 
 function addMessages(message){
-	$("#messages").append(`
+	if (message.name == "streamer") {
+		$("#messages").append(`
+		<h2>${message.name}</h2>
+		<p>${message.message}</p>`)
+	} else {
+		$("#messages").append(`
 		<h3>${message.name}</h3>
 		<p>${message.message}</p>`)
+	}
 }
 
 function getMessages(){
