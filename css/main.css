@@ -253,3 +253,12 @@ nav {
     color: white;
     font-style: bold;
 }
+
+#endVote {
+    font-weight: bold;
+    width: 300px;;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
