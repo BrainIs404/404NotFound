@@ -3,7 +3,7 @@ socket.on("message", addMessages)
 socket.on("vote", addVote)
 
 function sendUserCreds(creds) {
-	$.post('http://localhost:3000/user', creds);
+	$.post('https://mellow-wiggly-ocelot.glitch.me/user', creds);
 }
 
 function addMessages(message){
@@ -19,13 +19,13 @@ function addMessages(message){
 }
 
 function getMessages(){
-	$.get('/messages', (data) => {
+	$.get('https://mellow-wiggly-ocelot.glitch.me/messages', (data) => {
 		data.forEach(addMessages);
 	})
 }
 
 function sendMessage(message){
-	$.post('http://localhost:3000/messages', message);
+	$.post('https://mellow-wiggly-ocelot.glitch.me/messages', message);
 }
 
 var highestVotes = [];
@@ -38,7 +38,7 @@ function changeBarValue(id, vote) {
 }
 
 function sendVote(vote) {
-	$.post('http://localhost:3000/vote', vote);
+	$.post('https://mellow-wiggly-ocelot.glitch.me/vote', vote);
 }
 
 function addVote(vote) {
@@ -69,7 +69,7 @@ function addVote(vote) {
 }
 
 function getVote() {
-	$.get('/vote', (data) => {
+	$.get('https://mellow-wiggly-ocelot.glitch.me/vote', (data) => {
 		data.forEach(addVote);
 	})
 }
@@ -107,8 +107,8 @@ $(() => {
 
 	$("#effect-vote").submit(function (event) {
 		event.preventDefault();
-		response = $("#effect-vote").serializeArray();
-		console.log(response)
+		var response = $("#effect-vote").serializeArray();
+		console.log(response);
 		sendVote({
 			username: $("#username").text(),
 			bass: response[0].value,

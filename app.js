@@ -22,19 +22,19 @@ app.post('/messages', (req, res) => {
   message.save((err) =>{
     if(err) {
       console.log(err);
-      sendStatus(500);
+      res.sendStatus(500);
     }
     io.emit('message', req.body);
     res.sendStatus(200);
   })
 })
 
-app.post('/user', (req, res) => {
+app.post('/users', (req, res) => {
   var user = new User(req.body);
   user.save((err) =>{
     if(err) {
       console.log(err);
-      sendStatus(500);
+      res.sendStatus(500);
     }
     res.sendStatus(200);
   })
@@ -51,7 +51,7 @@ app.post('/vote', (req, res) => {
   vote.save((err) =>{
     if(err) {
       console.log(err);
-      sendStatus(500);
+      res.sendStatus(500);
     }
     io.emit('vote', req.body);
     res.sendStatus(200);
@@ -59,8 +59,8 @@ app.post('/vote', (req, res) => {
 })
 
 var Message = mongoose.model('Message', {
-	name: String,
-	message: String,
+  name: String,
+  message: String,
 })
 
 var User = mongoose.model('User', {
@@ -75,14 +75,14 @@ var Vote = mongoose.model('Vote', {
   middle: Number,
 })
 
-var dURL = 'mongodb://localhost:27017/chat'
+var dURL = 'mongodb+srv://root:kekhandsbestemotes@cluster0.pmgwr.mongodb.net/VSTParams?retryWrites=true&w=majority'
 
-chatDb = mongoose.connect(dURL, (err) => {
-	console.log('mongodb connected', err)
+var chatDb = mongoose.connect(dURL, (err) => {
+  console.log('mongodb connected', err)
 })
 
 var server = http.listen(3000, () => {
-	console.log('server is running on port', server.address().port);
+  console.log('server is running on port', server.address().port);
 });
 
 io.on("connection", () =>{
