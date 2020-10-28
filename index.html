@@ -71,15 +71,9 @@
 		<div class="row" style="margin: auto">
 		<div class="col">
 			<div class="results">
-				<div>
-					<div class="title">
-						<p id="title">Voting Result Top 5</p>
-					</div>
-
-					<div class="icon1"><img src="img/refresh.png" alt="refresh icon" width="20" height="20"></div>
-
-					<div class="icon2"><img src="img/hide.png" alt="hide windows" width="45" height="45"></div>
-				</div>
+        <div class="title">
+          <p id="title">Voting Results</p>
+        </div>
 
 				<div class="col h-50">
 					<div class="progress rounded mt-4 vote-progress">
@@ -130,7 +124,7 @@
 
 			<div class="vote">
 				<div class="title">
-					<h5>Vote</h5>
+					<p>Vote</p>
 				</div>
 
 				<form id="effect-vote">
@@ -141,13 +135,13 @@
 						</div>
 
 						<div class="colSlider">
-							<div id="treble"></div>
-							<p>Treble</p>
-						</div>
-
-						<div class="colSlider">
 							<div id="middle"></div>
 							<p>Middle</p>
+						</div>
+            
+            <div class="colSlider">
+							<div id="treble"></div>
+							<p>Treble</p>
 						</div>
 					</div>
 
@@ -173,7 +167,7 @@
 							width: 1000,
 							height: 600,
 							channel: "meleebad",
-							parent: ["deco3801-404notfound.uqcloud.net"]
+							parent: ["mellow-wiggly-ocelot.glitch.me"]
 						};
 						var player = new Twitch.Player("streamID", options);
 						player.setVolume(0.5);
@@ -186,8 +180,8 @@
 		</div>
 
 		<div  class="col">
-			<div id=chatbox>
-				<div><h3>Live Chat</h3></div>
+			<div id="chatbox">
+				<div class="title"><p>Live Chat</p></div>
 				<hr style="border:0;background-color:gray;height:0.5px;margin-top:1px;">
 				<div id="messages"></div>
 

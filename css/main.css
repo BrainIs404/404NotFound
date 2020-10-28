@@ -157,7 +157,7 @@ nav {
 
 #chatbox{
     border: 1px solid #0D45AB;
-    border-radius: 5px;
+    border-radius: 20px;
     float: right;
     margin-right: 10px;
     width: 400px !important;
@@ -261,4 +261,61 @@ nav {
     border-radius: 20px;
     margin-left: 10px;
     margin-top: 20px;
+}
+
+.vote {
+  height: auto;
+}
+
+.title {
+    color: #0D45AB;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+
+.sliderSubmit {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.sliderSubmit button {
+    width: 50%;
+}
+
+.chatLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.streamerNameTag {
+    width: 40%;
+    float: left;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.audienceNameTag {
+    color: #0D45AB;
+    width: 40%;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right:10px;
+}
+
+.messContent {
+    width: 60%;
+    word-wrap: break-word;
+    font-size: 0.75em;
+    float: right;
+    font-size: 1em;
 }
