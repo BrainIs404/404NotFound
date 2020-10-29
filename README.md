@@ -1,9 +1,10 @@
-**Web page for the VSTreamers project**
+### Web page for the VSTreamers
 
 The Studio 3 project of team 404NotFound 2 parts:
 
 - The VST plugin that runs on the streamer's side
 - The web page that exists on the audience's side.
+- A database for storing chat messages , user credentials and vote results.
 
 This repo is for the web page, which will have these features:
 
@@ -12,7 +13,7 @@ This repo is for the web page, which will have these features:
 - Viewing the voting results.
 - View the stream (embedded Twitch stream).
 
-**How to view**
+### How to view
 
 We host it on [glitch ](https://mellow-wiggly-ocelot.glitch.me/)
 
@@ -22,9 +23,9 @@ npm install
 node app.js
 ```
 
-After that, it can be accessed on localhost:3000.
+After that, it can be accessed on localhost:3000. However, the chat, voting and stream features will not work.
 
-**Final product**
+### Final product
 
 The web page overview:
 ![Overview](./img/overview.png)
