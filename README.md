@@ -23,7 +23,8 @@ npm install
 node app.js
 ```
 
-After that, it can be accessed on localhost:3000. However, the chat, voting and stream features will not work.
+After that, it can be accessed on localhost:3000. 
+Note: this repo will have the defaultURL set to "`http://localhost:3000/`". For more detail, please see [client.js](https://github.com/BrainIs404/404NotFound/blob/master/js/client.js)
 
 ### Final product
 

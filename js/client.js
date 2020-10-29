@@ -2,8 +2,13 @@ var socket = io();
 socket.on("message", addMessages)
 socket.on("vote", addVote)
 
+var url = "https://mellow-wiggly-ocelot.glitch.me/";
+var urlLocal = "http://localhost:3000/";
+
+var defaultURL = urlLocal;
+
 function sendUserCreds(creds) {
-	$.post('https://mellow-wiggly-ocelot.glitch.me/user', creds);
+	$.post(defaultURL + 'user', creds);
 }
 
 function addMessages(message){
@@ -27,13 +32,13 @@ function addMessages(message){
 }
 
 function getMessages(){
-	$.get('https://mellow-wiggly-ocelot.glitch.me/messages', (data) => {
+	$.get(defaultURL + 'messages', (data) => {
 		data.forEach(addMessages);
 	})
 }
 
 function sendMessage(message){
-	$.post('https://mellow-wiggly-ocelot.glitch.me/messages', message);
+	$.post(defaultURL + 'messages', message);
 }
 
 var highestVotes = [];
@@ -46,7 +51,7 @@ function changeBarValue(id, vote) {
 }
 
 function sendVote(vote) {
-	$.post('https://mellow-wiggly-ocelot.glitch.me/vote', vote);
+	$.post(defaultURL + 'vote', vote);
 }
 
 function addVote(vote) {
@@ -77,7 +82,7 @@ function addVote(vote) {
 }
 
 function getVote() {
-	$.get('https://mellow-wiggly-ocelot.glitch.me/vote', (data) => {
+	$.get(defaultURL + 'vote', (data) => {
 		data.forEach(addVote);
 	})
 }
