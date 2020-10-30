@@ -1,4 +1,10 @@
+//Javascript code for sliders
+//The code here uses the roundSlider JQuery plugin
+//Link to plugin: https://roundsliderui.com/
+
 $(function() {
+
+	//bass slider
 	$(`#bass`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
@@ -22,6 +28,7 @@ $(function() {
 		}
 	});
 
+	//treble slider
 	$(`#treble`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
@@ -45,6 +52,7 @@ $(function() {
 		}
 	});
 
+	//middle slider
 	$(`#middle`).roundSlider({
 		sliderType: "min-range",
 		circleShape: "pie",
