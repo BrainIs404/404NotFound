@@ -18,7 +18,7 @@ var defaultURL = urlLocal;
 //							password: str
 //						}
 function sendUserCreds(creds) {
-	$.post(defaultURL + 'user', creds);
+	$.post(defaultURL + 'users', creds);
 }
 
 //display user message on chat box
